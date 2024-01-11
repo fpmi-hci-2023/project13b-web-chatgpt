@@ -1,0 +1,21 @@
+<form [formGroup]="fG" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3 row">
+        <label for="firstname" class="col-sm-2 col-form-label">User Name </label>
+        <div class="col-sm-10">
+            <input type="text" id="username" class="form-control" formControlName="username" required>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="password" class="col-sm-2 col-form-label">Password </label>
+        <div class="col-sm-10">
+            <input type="password" id="password" class="form-control" formControlName="password" required>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+
+</form>

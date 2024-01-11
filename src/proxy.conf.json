@@ -1,0 +1,14 @@
+{
+    "/api" : {
+        "target": "https://auth.hci.richardhere.dev",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/task/" : {
+        "target": "https://task.hci.richardhere.dev",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

@@ -1,0 +1,18 @@
+<h3>List of Tasks</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <th scope="row"><a [routerLink]="['details', task.id]" routerLinkActive="active">{{task.id}}</a></th>
+            <td>{{task.name}}</td>
+            <td>{{task.status}}</td>
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-primary" [routerLink]="['add']" role="button">+ Add Task</a>
