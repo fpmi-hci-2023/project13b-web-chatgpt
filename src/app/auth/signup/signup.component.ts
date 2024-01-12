@@ -33,16 +33,6 @@ export class SignupComponent {
   }
  
   onSubmit(){
-    this.authService.signup(this.email, this.username, this.password)
-      .subscribe({
-        next: (response) => {
-          // Handle successful login response here
-          console.log('Signup successful', response);
-        },
-        error: (error) => {
-          // Handle login error here
-          console.error('Signup failed', error);
-        }
-      });
+    this.authService.signup(this.email, this.username, this.password);
   }
 }

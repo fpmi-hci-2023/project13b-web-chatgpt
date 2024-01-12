@@ -9,8 +9,21 @@ export interface Task
     status: TaskStatus 
 }
 
+export interface TaskModel
+{
+    name: string,
+    description: string,
+    coordinators: string[]
+}
+
 export enum TaskStatus {
     CREATED = 1,
     APPROVED = 3,
     DECLINED = 4
+}
+
+export interface User {
+    email: string,
+    username: string,
+    lastLogin: string
 }
