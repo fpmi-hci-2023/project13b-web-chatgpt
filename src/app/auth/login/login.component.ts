@@ -28,16 +28,6 @@ export class LoginComponent {
   }
  
   onSubmit(){
-    this.authService.login(this.username, this.password)
-      .subscribe({
-        next: (response) => {
-          // Handle successful login response here
-          console.log('Login successful', response);
-        },
-        error: (error) => {
-          // Handle login error here
-          console.error('Login failed', error);
-        }
-  });
+    this.authService.login(this.username, this.password);
   }
 }

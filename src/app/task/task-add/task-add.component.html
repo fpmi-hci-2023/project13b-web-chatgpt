@@ -1,0 +1,26 @@
+<h2>Add new Task</h2>
+<br>
+<form [formGroup]="fg" (ngSubmit)="onSubmit()">
+    <div class="mb-3 row">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input id="name" type="text" class="form-control" placeholder="Name" formControlName="name" name="name" required>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="task" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input id="desc" type="text" class="form-control" placeholder="Description" formControlName="description" name="description" required>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="task" class="col-sm-2 col-form-label">Coordinator</label>
+        <div class="col-sm-10">
+            <input id="coordinator" type="text" class="form-control" placeholder="Coordinator email" formControlName="coordinator" name="coordinator" required>
+        </div>
+    </div>
+    <p>
+        <button class="btn btn-primary" type="submit" [disabled]="!fg.valid">Submit</button>
+    </p>
+</form>
+<a class="btn btn-primary" [routerLink]="['']" role="button">Cancel</a>
